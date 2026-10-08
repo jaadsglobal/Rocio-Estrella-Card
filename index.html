@@ -233,6 +233,11 @@
         color: #171104;
       }
 
+      #whatsapp-link {
+        animation: whatsappPulse 1.9s ease-in-out infinite;
+        border-color: rgba(216, 184, 106, 0.45);
+      }
+
       .utility {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -384,6 +389,18 @@
         to {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+
+      @keyframes whatsappPulse {
+        0%,
+        100% {
+          background: rgba(255, 255, 255, 0.055);
+          box-shadow: 0 0 0 rgba(216, 184, 106, 0);
+        }
+        50% {
+          background: rgba(216, 184, 106, 0.16);
+          box-shadow: 0 0 18px rgba(216, 184, 106, 0.28);
         }
       }
 
