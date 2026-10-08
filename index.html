@@ -105,30 +105,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
-        text-align: center;
+        margin-bottom: 18px;
       }
 
-      .brand-mark {
-        display: grid;
-        gap: 2px;
-        min-width: 0;
-      }
-
-      .brand-name {
-        color: var(--gold-soft);
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(1.75rem, 8vw, 2.35rem);
-        font-weight: 500;
-        line-height: 1;
-      }
-
-      .brand-role {
-        color: var(--gold);
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
+      .brand-logo {
+        display: block;
+        width: 104px;
+        height: auto;
+        border: 1px solid rgba(216, 184, 106, 0.24);
+        border-radius: 18px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34), 0 0 24px rgba(216, 184, 106, 0.12);
       }
 
       .portrait-wrap {
@@ -416,11 +402,8 @@
       <article class="card" aria-label="Tarjeta digital de Rocío Estrella">
         <div class="inner">
           <header>
-            <div class="brand" aria-label="Rocío Estrella Asistente Online">
-              <div class="brand-mark">
-                <span class="brand-name">Rocío Estrella</span>
-                <span class="brand-role">Asistente Online</span>
-              </div>
+            <div class="brand">
+              <img class="brand-logo" src="rocio-logo.svg" alt="Rocío Estrella Asistente Online" />
             </div>
 
             <div class="portrait-wrap">
