@@ -432,7 +432,7 @@
             <div class="brand">
               <img
                 class="brand-logo"
-                src="Captura%20de%20pantalla%202026-10-08%20a%20las%209.27.51.png"
+                src="logo-icon.png"
                 alt="Rocío Estrella Asistente Online"
               />
             </div>
@@ -440,7 +440,7 @@
             <div class="portrait-wrap">
               <div class="portrait">
                 <img
-                  src="WhatsApp%20Image%202026-09-28%20at%2012.41.58%20(1).jpeg"
+                  src="profile-photo.jpeg"
                   alt="Rocío Estrella"
                 />
               </div>
@@ -449,7 +449,7 @@
             <div class="intro">
               <img
                 class="wordmark-logo"
-                src="logo-horizontal-transparent.png"
+                src="logo-wordmark.png"
                 alt="Rocío Estrella Asistente Online"
               />
               <p class="bio" id="profile-bio">
@@ -607,11 +607,9 @@
         }
       });
 
-      const qrApi =
-        "https://api.qrserver.com/v1/create-qr-code/?size=720x720&margin=18&color=111111&bgcolor=FFFFFF&data=" +
-        encodeURIComponent(cardUrl);
-      qrCode.src = qrApi;
-      downloadQr.href = qrApi;
+      const qrImage = "qr-rocio-estrella.png";
+      qrCode.src = qrImage;
+      downloadQr.href = qrImage;
 
       function showToast(message) {
         toast.textContent = message;
