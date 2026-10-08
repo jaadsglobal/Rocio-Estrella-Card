@@ -180,7 +180,7 @@
 
       .actions {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
         margin-top: 24px;
       }
@@ -467,10 +467,6 @@
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.63 2.6a2 2 0 0 1-.45 2.11L8 9.71a16 16 0 0 0 6.29 6.29l1.28-1.28a2 2 0 0 1 2.11-.45c.83.3 1.7.51 2.6.63A2 2 0 0 1 22 16.92Z"/></svg>
               Llamar
             </a>
-            <a class="button" id="email-link" href="#">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
-              Email
-            </a>
           </nav>
 
           <button
@@ -573,7 +569,6 @@
 
       const whatsappLink = document.querySelector("#whatsapp-link");
       const phoneLink = document.querySelector("#phone-link");
-      const emailLink = document.querySelector("#email-link");
       const servicesList = document.querySelector("#services-list");
       const servicesToggle = document.querySelector("#services-toggle");
       const servicesToggleLabel = document.querySelector("#services-toggle-label");
@@ -584,7 +579,6 @@
 
       whatsappLink.href = `https://wa.me/${profile.whatsapp}`;
       phoneLink.href = `tel:${profile.phone}`;
-      emailLink.href = `mailto:${profile.email}`;
 
       servicesList.innerHTML = profile.services
         .map(
