@@ -453,10 +453,16 @@
             </a>
           </nav>
 
-          <a class="button cta" href="#servicios">
+          <button
+            class="button cta"
+            id="services-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="servicios"
+          >
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M18 9 12 3 6 9"/></svg>
-            Ver servicios
-          </a>
+            <span id="services-toggle-label">Ver servicios</span>
+          </button>
 
           <div class="utility" aria-label="Acciones de tarjeta">
             <button class="button" id="save-contact" type="button">
@@ -469,7 +475,7 @@
             </button>
           </div>
 
-          <section class="section" id="servicios" aria-labelledby="services-title">
+          <section class="section" id="servicios" aria-labelledby="services-title" hidden>
             <div class="section-title">
               <h2 id="services-title">Servicios</h2>
               <span class="divider" aria-hidden="true"></span>
@@ -549,6 +555,9 @@
       const phoneLink = document.querySelector("#phone-link");
       const emailLink = document.querySelector("#email-link");
       const servicesList = document.querySelector("#services-list");
+      const servicesToggle = document.querySelector("#services-toggle");
+      const servicesToggleLabel = document.querySelector("#services-toggle-label");
+      const servicesSection = document.querySelector("#servicios");
       const qrCode = document.querySelector("#qr-code");
       const downloadQr = document.querySelector("#download-qr");
       const toast = document.querySelector("#toast");
@@ -570,6 +579,19 @@
           `,
         )
         .join("");
+
+      servicesToggle.addEventListener("click", () => {
+        const isOpen = servicesToggle.getAttribute("aria-expanded") === "true";
+        servicesToggle.setAttribute("aria-expanded", String(!isOpen));
+        servicesSection.hidden = isOpen;
+        servicesToggleLabel.textContent = isOpen ? "Ver servicios" : "Ocultar servicios";
+
+        if (!isOpen) {
+          window.setTimeout(() => {
+            servicesSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }, 80);
+        }
+      });
 
       const qrApi =
         "https://api.qrserver.com/v1/create-qr-code/?size=720x720&margin=18&color=111111&bgcolor=FFFFFF&data=" +
