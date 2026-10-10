@@ -3,12 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rocío Estrella · Asistente Virtual</title>
+    <title>Rocío Estrella | Asistente Virtual para ventas, clientes y eventos</title>
     <meta
       name="description"
-      content="Tarjeta digital de Rocío Estrella, Asistente Virtual."
+      content="Rocío Estrella, asistente virtual. Apoyo profesional en ventas, atención al cliente y gestión de eventos para organizar y hacer crecer tu negocio."
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Rocío Estrella" />
+    <meta name="theme-color" content="#080808" />
+    <link rel="canonical" href="https://rocioestrellacard.me/" />
     <link rel="icon" type="image/png" sizes="128x128" href="favicon.png" />
+    <link rel="preload" as="image" href="logo-icon.png" />
+    <link rel="preload" as="image" href="logo-wordmark.png" />
+    <link rel="preload" as="image" href="rocio-portrait-cutout-384.png" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Rocío Estrella | Asistente Virtual" />
+    <meta
+      property="og:description"
+      content="Apoyo profesional en ventas, atención al cliente y gestión de eventos."
+    />
+    <meta property="og:url" content="https://rocioestrellacard.me/" />
+    <meta property="og:site_name" content="Rocío Estrella" />
+    <meta property="og:image" content="https://rocioestrellacard.me/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Rocío Estrella, asistente online" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rocío Estrella | Asistente Virtual" />
+    <meta
+      name="twitter:description"
+      content="Apoyo profesional en ventas, atención al cliente y gestión de eventos."
+    />
+    <meta name="twitter:image" content="https://rocioestrellacard.me/og-image.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rocío Estrella",
+        "jobTitle": "Asistente Virtual",
+        "url": "https://rocioestrellacard.me/",
+        "email": "rocioestrellavirtualoffice@gmail.com",
+        "telephone": "+34623410661",
+        "description": "Asistente virtual especializada en ventas, atención al cliente y gestión de eventos.",
+        "knowsAbout": ["Closer de ventas", "Atención al cliente", "Gestión de eventos"]
+      }
+    </script>
     <style>
       :root {
         --bg: #080808;
@@ -60,6 +100,15 @@
       a,
       button {
         -webkit-tap-highlight-color: transparent;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
       }
 
       .page {
@@ -436,19 +485,28 @@
       <article class="card" aria-label="Tarjeta digital de Rocío Estrella">
         <div class="inner">
           <header>
+            <h1 class="sr-only">Rocío Estrella, Asistente Virtual</h1>
             <div class="brand">
               <img
                 class="brand-logo"
                 src="logo-icon.png"
                 alt="Rocío Estrella Asistente Online"
+                width="112"
+                height="112"
+                decoding="async"
+                fetchpriority="high"
               />
             </div>
 
             <div class="portrait-wrap">
               <div class="portrait">
                 <img
-                  src="rocio-portrait-cutout.png"
+                  src="rocio-portrait-cutout-384.png"
                   alt="Rocío Estrella"
+                  width="384"
+                  height="398"
+                  decoding="async"
+                  fetchpriority="high"
                 />
               </div>
             </div>
@@ -458,6 +516,10 @@
                 class="wordmark-logo"
                 src="logo-wordmark.png"
                 alt="Rocío Estrella Asistente Online"
+                width="536"
+                height="108"
+                decoding="async"
+                fetchpriority="high"
               />
               <p class="bio" id="profile-bio">
                 Apoyo profesional para gestionar clientes, ventas y organización de tu negocio.
@@ -513,7 +575,7 @@
             </div>
             <div class="share-box">
               <div class="qr-frame">
-                <img id="qr-code" alt="Código QR de la tarjeta de Rocío Estrella" />
+                <img id="qr-code" alt="Código QR de la tarjeta de Rocío Estrella" width="720" height="720" loading="lazy" decoding="async" />
               </div>
               <a class="button download" id="download-qr" href="#" download="qr-rocio-estrella.png">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
